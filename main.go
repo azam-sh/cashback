@@ -8,9 +8,9 @@ const limit = 2_000
 
 func calculateCashback(amount int) {
 	cashback := 0
-	if amount > 5_000 {
+	if amount >= 5_000 {
 		cashback = amount * cashbackPercent / fullPercent
-	} else if amount <= 5_000 {
+	} else if amount < 5_000 {
 		cashback = 0
 	}
 	if cashback > limit {
